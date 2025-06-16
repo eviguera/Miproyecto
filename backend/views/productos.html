@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alta de Productos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            margin-right: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+
+        p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+    
+  </style>
+</head>
+<body>
+
+  <form action="/alta-producto" method="post">
+    <h2>Formulario de Alta de Productos</h2>
+
+    <label for="nombre">Nombre del Producto:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+
+    <label for="categoria">Categoría:</label>
+    <input type="text" id="categoria" name="categoria">
+
+    <label for="codigo">Código del Producto:</label>
+    <input type="text" id="codigo" name="codigo">
+
+    <label for="precio">Precio ($):</label>
+    <input type="number" id="precio" name="precio" step="0.01" required>
+
+    <button type="submit">Guardar Producto</button>
+    <button type="button" class="cancelar" onclick="window.location.href='categorias.html'">Cancelar</button>
+  </form>
+  <p style="text-align: center;">Eduardo Viguera</p>
+
+</body>
+</html>
